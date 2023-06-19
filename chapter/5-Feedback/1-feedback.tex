@@ -1,0 +1,75 @@
+\section{Feedback}\label{sec:feedbackPraktisch}
+
+Im Folgenden sind die Rückmeldungen der Kontextperson, sowie eigene Beobachtungen zur Verbesserung des Prototyps aufgelistet.
+Diese werden zunächst nur beschrieben.
+Die Abschnitte \autoref{sec:anpassungen} und \autoref{sec:erweiterung} enthalten sodann Lösungen der benannten Probleme in Form von angepassten Prototypen.
+
+In normalen Fällen obliegt es nicht den Entwicklern, Änderungen an dem Produkt anzustoßen.
+Durch die Arbeit des Autors im Finanzamt Kassel gehört dieser jedoch zu Teilen selbst in den Kreis der Kontextpersonen.
+Somit führte der Autor einen praktischen Test der Software selbst durch.
+Dies resultiert in dem Vorteil, dass dieser zwischen fertigen und unfertigen Funktionen der Software unterscheiden kann.
+Jedoch kann der Autor nicht die Selbstbeschreibungsfähigkeit und Lernfähigkeit seines eigenen Systems beurteilen.
+
+\subsection{Kontextperson}\label{sec:feedbackPerson}
+
+\textbf{Einsatzleitung:} Frau Christensen fiel bei genauerer Betrachtung der Prototypen auf, dass diese keine Möglichkeit bieten die den Einsatz leistende Behörde anzuzeigen.
+Im klassischen Fall ist auf den Objektzetteln ein "+" für "Finanzamt hat Objektleitung" und ein "-" für "Eine andere Behörde hat die Objektleitung" abgedruckt.
+Diese Angaben sind wichtig, wenn kritische Fragen bezüglich gefundenen Gegenständen entstehen.
+Fragen dieser Art sind an die oberste Objektleitung und deren Meldekopf zu stellen.
+Die Lösung dieses Problems ist in \autoref{sec:erweiterung} zu finden.
+
+
+\textbf{Zeiterfassung Protokoll:} Ebenfalls wurde die Erfassung der Zeit im Protokoll beanstandet.
+Die Tatsache, dass das Protokoll in vielen Fällen nicht direkt nach Eingang einer Information ausgefüllt wird, ist bereits aus \autoref{sec:interview-praktisch} bekannt.
+Jedoch war eine genaue Erfassung der Zeit zu Gunsten einer einfacheren Bedienung als überflüssig betrachtet worden.
+Frau Christensen stellte jedoch heraus, dass eine genaue Zeit für die weitere Arbeit mit dem Protokoll essentiell ist, da dieses häufig mit anderen Daten mit Zeitstempel abgeglichen wird.
+Die Lösung dieses Problems ist in \autoref{sec:erweiterung} zu finden.
+
+\textbf{Telefonnummern:} Eine weitere Anmerkung betrifft das Anzeigen von Telefonnummern auf dem Übersichtsbildschirm.
+Diese wurden bei ersten Gesprächen mit anderen Kontextpersonen gewünscht, stellen sich jedoch als nutzlos heraus.
+Die diesen Wunsch äußernde Kontextperson betrieb selbst vor längerer Zeit den Meldekopf.
+Zu dieser Zeit verfügten die Personen nicht über automatisch gepflegte Kontaktangaben der Fahnder*innen in den Diensthandys.
+Inzwischen sind diese vorhanden.
+Die Lösung dieses Problems ist in \autoref{sec:anpassungen} zu finden.
+
+\textbf{Referenzieren von Updates:} Ebenso wurde beanstandet, dass beim Verfassen eines Updates kein bestehendes Update referenziert werden kann.
+Dies soll jedoch möglich sein, damit beispielsweise die Ausführung eines ToDos direkt mit der vorherigen Erstellung desselben verbunden werden kann.
+Diese Funktion wurde in den bisherigen Prototypen unabsichtlich nicht beachtet.
+Die Lösung dieses Problems ist in \autoref{sec:erweiterung} zu finden.
+
+\textbf{Updates bearbeiten:} Als letzten Punkt nannte Frau Christensen das bearbeiten bereits abgeschickter Updates.
+Dies sei notwendig, sollten Informationen für ein Update vergessen worden sein oder ein simpler Tippfehler vorliegen.
+Eine vorherige Beachtung dieser Funktion fand nicht statt, da der Entwickelnde im Falle zusätzlicher Informationen stets ein neues Update verfasste.
+Tippfehler waren im Konzept ebenfalls verkraftbar.
+Die Lösung dieses Problems ist in \autoref{sec:anpassungen} zu finden.
+
+\subsection{Beobachtungen}\label{sec:feedbackMe}
+
+\textbf{Objekte Filtern:} In der praktischen Anwendung viel dem Autor auf, dass das erstellte System vom Filtern von Objekten in der Praxis unverständlich ist.
+Das Filtersystem basiert im technischen Hintergrund rein auf Tags, dies wird den Nutzenden jedoch nicht klar kommuniziert.
+Sie denken, ein auf Kategorien basierendes Filtersystem zu nutzen, jedoch wird im Hintergrund nur die Existenz eines Tags für ein Objekt überprüft.
+Diese Unklarheit muss für das Endprodukt beseitigt werden.
+Die Lösung dieses Problems ist in \autoref{sec:anpassungen} zu finden.
+
+\textbf{Letzte Standorte:} Im Zuge einer Großdurchsuchung, welche sich über ein größeres innerdeutsches Gebiet erzog wurde festgestellt, dass die Angabe des letzten Standortes für verfügbare Personen nützlich ist.
+War eine Person beispielsweise in einem Objekt in München zu Gange, wird so ausgeschlossen, dass diese zu einem Objekt in beispielsweise Hamburg verschoben wird.
+Die bei der Entwicklung des Konzepts bekannten Großdurchsuchungen erstreckten sich stets über mit dem Auto gut erreichbare Distanzen.
+Auf Nachfrage wurde jedoch bestätigt, dass häufiger große Distanzen zwischen Objekten auftreten.
+Die Lösung dieses Problems ist in \autoref{sec:erweiterung} zu finden.
+
+\textbf{Timeline Tags:} Ebenfalls viel auf, dass eine schnelle Zuordnung von Updates der Timeline zu Personen oder Objekten schwer viel.
+Hierzu muss stets der gesamte Text des Updates überflogen werden.
+Diese Texte sind der der Praxis länger vorher angenommen.
+Dabei können Updates schnell ein Drittel der Timeline bedecken.
+Im Zuge der Konzepterstellung wurde von maximal dreizeiligen, prägnanten Updates ausgegangen.
+Die Lösung dieses Problems ist in \autoref{sec:anpassungen} zu finden.
+
+\textbf{Hintergrund von Objekten:} Ein weiterer zu beanstandender Punkt in den Prototypen ist die Gestaltung des Hintergrunds von Objekten.
+Dieser war zunächst je nach Standort des Objekts in verschiedenen Farben gefärbt.
+In der Praxis stellte sich dies jedoch als unübersichtlich dar.
+Die Lösung dieses Problems ist in \autoref{sec:anpassungen} zu finden.
+
+\textbf{Rechtschreibkorrektur:} Im Zuge der längeren Benutzung des programmierten Prototypen wurde eine integrierte Rechtschreibkorrektur schmerzlich vermisst.
+Durch Tippfehler wurde die Produktivität des Nutzenden stark gemindert, da das finden und Korrigieren von Schreibfehlern stets einige Zeit in Anspruch nahm.
+Eine Rechtschreibkorrektur ist somit dringend gewünscht.
+Die Lösung dieses Problems ist in \autoref{sec:erweiterung} zu finden.

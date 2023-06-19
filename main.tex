@@ -1,0 +1,100 @@
+\documentclass[
+    %draft, % Mit % kommentieren, um Bilder sichtbar zu machen und Links zu aktivieren
+    pdftex,
+    a4paper,
+    oneside,
+    parskip,
+    numbers=noenddot,
+    listof=totoc,
+    bibliography=totoc,
+    hyperfootnotes=false
+]{scrreprt}
+\setuptoc{toc}{totoc}
+
+\newcommand{\thesistitle}{Nutzungsorientierten Gestaltung am Beispiel des Digitalen Meldekopf}
+\newcommand{\thesistype}{S e m e s t e r a r b e i t}
+\newcommand{\thesistypedesc}{im Fachbereich Elektrotechnik/Informatik \\
+    Fachgebiet Partizipative IT-Gestaltung \\
+    der Universität Kassel}
+\newcommand{\thesisauthorname}{Lukas Kawollek}
+\newcommand{\thesisauthorhomestreet}{Frommershäuserstraße 94A}
+\newcommand{\thesisauthorhometown}{34246 Vellmar}
+\newcommand{\thesisauthormatrikelnumber}{35679015}
+\newcommand{\thesisauthoremail}{lukas@kawollek.com}
+\newcommand{\thesisdepartment}{Fachgebiet Partizipative IT-Gestaltung}
+\newcommand{\thesisfirstreviewer}{Prof.\ Dr.\ Claude Draude}
+\newcommand{\thesissecondreviewer}{Prof.\ Dr.\ Emmett Brown}
+\newcommand{\thesissupervisor}{Christian Coupé,\ M.Sc.}
+\newcommand{\thesisdate}{\today}
+
+\input{chapter/0-Prefix/0-header}
+
+\begin{document}
+
+    \pagenumbering{roman}
+
+    \include{chapter/0-Prefix/1-titlepage}
+
+    \include{chapter/0-Prefix/2-kommentar}
+
+    \tableofcontents
+
+    \pagebreak
+    \pagenumbering{arabic}
+
+    % Hier Kapitel einfügen
+    \include{chapter/1-Einleitung/0-grundlegendes.tex}
+        \include{chapter/1-Einleitung/1-definition.tex}
+        \include{chapter/1-Einleitung/2-kontext.tex}
+        \include{chapter/1-Einleitung/3-person.tex}
+
+    \include{chapter/2-Methoden/0-grundlegendes.tex}
+        \include{chapter/2-Methoden/1-interview.tex}
+        \include{chapter/2-Methoden/2-persona.tex}
+        \include{chapter/2-Methoden/3-modelle.tex}
+        \include{chapter/2-Methoden/4-szenarien.tex}
+        \include{chapter/2-Methoden/5-prototypen.tex}
+        \include{chapter/2-Methoden/6-usability_tests}
+
+    \include{chapter/3-Anwendung/0-grundlegendes.tex}
+        \include{chapter/3-Anwendung/1-interview.tex}
+        \include{chapter/3-Anwendung/2-modell.tex}
+        \include{chapter/3-Anwendung/3-persona.tex}
+        \include{chapter/3-Anwendung/4-szenario.tex}
+
+    \include{chapter/4-Gestaltung/0-grundlegendes.tex}
+        \include{chapter/4-Gestaltung/1-szenario.tex}
+        \include{chapter/4-Gestaltung/2-prototyp.tex}
+
+    \include{chapter/5-Feedback/0-grundlegendes.tex}    
+        \include{chapter/5-Feedback/1-feedback.tex}
+        \include{chapter/5-Feedback/2-anpassungen.tex}
+        \include{chapter/5-Feedback/3-erweiterung.tex}
+
+    \include{chapter/6-Inclusive_Design/0-grundlegendes.tex}
+        \include{chapter/6-Inclusive_Design/1-erlauuterung.tex}
+        \include{chapter/6-Inclusive_Design/2-zusaetzliche_persona.tex}
+        \include{chapter/6-Inclusive_Design/3-anpassungen.tex}
+
+    \include{chapter/7-Fazit/0-grundlegendes.tex}
+        \include{chapter/7-Fazit/1-zusammenfassung.tex}
+        \include{chapter/7-Fazit/2-reflektion.tex}
+        \include{chapter/7-Fazit/3-ausblick.tex}
+
+    % Die nächsten zwei Zeilen sind optional, sie sorgen dafür dass alles nach dem Inhalt wieder mit römischen Zahlen nummeriert wird.
+    \pagenumbering{roman}
+    \addtocounter{page}{3} % Dies ist die Anzahl der Seiten vor der Einleitung, muss möglicherweise angepasst werden, wenn das Inhaltsverzeichnis mehrere Seiten umfasst.
+
+    \bibliographystyle{alphadin}
+    \bibliography{main}
+
+    \listoffigures
+    % \listoftables
+    \renewcommand{\listoflistingscaption}{Listing-Verzeichnis}
+    % \listoflistings
+
+    \appendix
+    \include{chapter/8-Suffix/0-appendix}
+
+    \include{chapter/8-Suffix/1-declaration}
+\end{document}
